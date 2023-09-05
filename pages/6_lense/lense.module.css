@@ -1,0 +1,115 @@
+.main {
+  width: 100%;
+  height: 100%;
+  max-width: 1010px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  padding: 0 clamp(12px ,3.3334%, 48px);
+  background: white
+}
+.flex {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13.8613861%;
+}
+.imgbase {
+  box-shadow: 0px 0px 50px rgba(71, 62, 91, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  display: inline-flex;
+  position:absolute;
+  right: 9.08416834%; 
+  left: 9.41883768%; 
+  top: clamp(20px,8.06451613vw,50px);
+}
+.imgwrapper {
+  height: 100%;
+  max-width: 499px;
+  max-height: 620px;
+  position: relative;
+  display: flex;
+}
+.card {
+  max-width: 370px;
+  height: 314px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  flex-direction: column;
+}
+.imglense {
+  position: relative;
+}
+.imglense::before {
+  content: '';
+  width: 100%;
+  height: 107vw;
+  max-width: 500px;
+  max-height: 550px;
+  border-radius: 50px 350px 350px 50px;
+  position: absolute;
+  background: #E17369;
+  bottom: 120px;
+}
+.card p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 140.2%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+
+  color: #473E5B;
+  font-family: 'Poppins';
+  opacity: 0.9;
+}
+.card h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 3.125rem;
+  line-height: 130%;
+  font-family: 'Volkhov';
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+
+  color: #473E5B;
+}
+.title + .paragraph {
+  margin-top: 30px;
+}
+@media (max-width: 906px) {
+  .container {
+    height: 100%;
+  }
+  .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+  }
+  .card {
+    width: auto;
+    margin: 24px 12px;
+    z-index: 1;
+  }
+
+  .main {
+    margin: 48px 0;
+  }
+  .imglense {
+    position: absolute;
+    z-index: 0;
+    filter: blur(4px);
+  }
+}

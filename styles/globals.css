@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Inter&family=Lato:wght@700&family=Manrope:wght@200;600&family=Open+Sans&family=Poppins:wght@500;600&family=Roboto&family=Volkhov:wght@700&display=swap" rel="stylesheet");
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+  font-size: 16px;
+  
+
+}
+
+@media (max-width: 767px) {
+  font-size: calc(15px + 0.390625vw);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

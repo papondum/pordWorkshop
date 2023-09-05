@@ -1,0 +1,130 @@
+.main {
+  width: 100%;
+  max-width: 1170px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  padding: 0 48px;
+  background: white
+}
+.title {
+  text-align: center;
+  font-size: 2.125rem;
+  font-weight: 600;
+  color: #222831;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato';
+  
+}
+.subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 476px;
+  text-align: center;
+  color: #61646B;
+  margin: auto;
+  font-family: 'Inter';
+}
+.title + .subtitle {
+  margin-top: 18px;
+
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 317px;
+  
+
+  position: relative;
+}
+.subtitle + .flex, .subtitle + .wrapper {
+  margin-top: 70px;
+}
+.card {
+  max-width: 292.5px;
+  max-height: 288px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  flex-direction: column;
+  background: #F9FAFF;
+  transition: transform, width, height, max-width, max-height 0.3s cubic-bezier(.25,.8,.25,1);
+  z-index: 0;
+  position: relative;
+  text-align: center;
+  aspect-ratio: 292.5/288;
+}
+
+.active, .card:hover {
+  background: #FFF;
+  max-width: 314px;
+  max-height: 317px;
+  height: 100%;
+  /* width: 100%; */
+  box-shadow: 40px 50px 150px -55px rgba(220, 221, 226, 0.8);
+  z-index: 1;
+}
+.card p,.card_s p {font-size: 1rem; font-weight: 500; color: #61646B; margin: 0;
+  font-family: 'Inter'; z-index: 2;
+}
+.card h2,.card_s h2 {font-size: 3.875rem; font-weight: 700; color: #222831; margin:0; margin-bottom: 18px;
+  font-family: 'Lato'; z-index: 2;
+}
+
+.card_s {
+  max-width: 292.5px;
+  max-height: 288px;
+  height: 100%;
+  color: #000;
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  
+  
+}
+
+.slider {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 25%;
+  z-index: 0;
+  background: white;
+  transition: all .5s ease;
+  box-shadow: 40px 50px 150px -55px rgba(220, 221, 226, 0.8);
+}
+.card_s:nth-child(1):hover~.slider{
+  left: 0%;
+}
+.starter, .card_s:nth-child(2):hover~.slider{
+  left: 25%;
+}
+.card_s:nth-child(3):hover~.slider{
+  left: 50%;
+}
+.card_s:nth-child(4):hover~.slider{
+  left: 75%;
+}
+.secondflex {
+  background: #F9FAFF;
+}
+@media (max-width: 1024px) {
+  .active, .card:hover, .secondflex {
+    max-height: 256.946px;
+  }
+}

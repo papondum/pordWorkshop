@@ -1,0 +1,118 @@
+.main {
+  width: 100%;
+  max-width: 1100px;
+  font-family: 'Poppins';
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  padding: 48px;
+  background: white
+}
+.title {
+  text-align: center;
+  font-size: 3.1875rem;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.01em;
+}
+.title::before {
+  content: 'SUCCESS STORIES';
+  font-size: 1rem;
+  line-height: 20px;
+  margin-bottom: 13px;
+  text-align: center;
+  letter-spacing: 0.42em;
+  color: #FF1919;
+}
+.flex {
+  gap: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+}
+.title + .flex {
+  margin-top: 72px;
+}
+.card {
+  display: flex;
+  aspect-ratio: 283/270;
+  max-width: 283px;
+  max-height: 270px;
+  width: 100%;
+  color: #000;
+  background: linear-gradient(312.25deg, #FFC4BC 0%, rgba(255, 255, 255, 0) 66.19%);
+  border-radius: 16px;
+  padding: 3.8187% 4%;
+  position: relative;
+}
+.card p {font-size: 0.8125rem; font-weight: 400; color: #000; margin: 0;}
+.card h2 {font-size: 2.75rem; font-weight: 600; margin:0; margin-bottom: 18px; line-height: 45px;}
+/* TODO p + h2 margin 18 */
+.innercard {
+  text-align: center;
+  border-radius: 16px;
+  background-color: white;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 40px 80px #FBE4E0;
+}
+._innerest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.card::before {
+  content: '';
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  position: absolute;
+  background: linear-gradient(131.83deg, #FFFAFA 0%, #FFF7F7 99.21%);;
+  top: 0;
+  left: 0px;
+  z-index: 0;
+  border-radius: 16px;
+}
+@media (max-width: 767px) {
+  .title + .flex {
+    margin-top: 36px;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .card {
+   padding: 42px 44px; 
+  }
+  .container {
+    height: auto;
+  }
+  .main {
+    margin: 120px 0;
+  }
+  .iconwrapper {
+    margin:auto;
+  }
+  /* .innercard {
+    max-width: 826px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-gap: 12px;
+    height: 186px;
+    width: 195px;
+  } */
+  .card h2 {
+    margin: 0px;
+  }
+}

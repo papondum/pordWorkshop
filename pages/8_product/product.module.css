@@ -1,0 +1,103 @@
+.main {
+  width: 100%;
+  max-width: 1186px;
+    font-family: 'Roboto';
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  padding: 0 12px;
+  background: #CFD4D0;
+}
+.title::before {
+  content: 'ABOUT PRODUCT';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 10px;
+
+  color: #67766B;
+}
+.title {
+  /* font-family: 'Calistoga'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 66px;
+  letter-spacing: 0.01em;
+  color: #17181A;
+  display: flex;
+  flex-direction: column;
+  }
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card {
+  display: flex;
+  align-items: flex-end;
+  color: #000;
+  margin: auto;
+}
+.card1 {
+  width: 350px;
+  height: 329px;
+  backdrop-filter: blur(75px);
+}
+.cardstyle1 {
+  background: #E3E2DD;
+  padding: 42px 47px 42px 52px;
+}
+.cardstyle1 p {
+  max-width: 251px;
+}
+.cardstyle2 {
+  border: 2px solid #BBC2BD;
+  padding: 90px 66px 42px 80px;
+  max-height: 254px;
+}
+.cardstyle2 p {
+  max-width: 205px;
+}
+.card1 p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #5A5D63;
+}
+.card1 h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: auto;
+  letter-spacing: 0.02em;
+
+  color: #18191B;
+}
+.card2 {
+  max-width: 350px;
+
+}
+
+@media (max-width: 768px) {
+  .flex {
+    grid-template: 1fr 1fr/ 1fr 1fr;
+    display: grid;
+  }
+  .card {
+    width: auto;
+    margin: 24px 12px;
+  }
+  .container {
+    height: auto;
+  }
+  .main {
+    margin: 120px 0;
+  }
+}
